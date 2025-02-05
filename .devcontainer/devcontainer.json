@@ -3,8 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.9",
   "features": {
     "aws-cli": "latest",
-    "kubectl": "latest",
     "terraform": "latest"
   },
-  "postCreateCommand": "aws eks update-kubeconfig --region <your-region> --name <your-cluster-name>"
+  "postCreateCommand": "curl -LO https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && mv kubectl /usr/local/bin/"
 }
