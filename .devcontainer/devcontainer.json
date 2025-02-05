@@ -1,0 +1,10 @@
+{
+  "name": "EKS Dev",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "features": {
+    "aws-cli": "latest",
+    "kubectl": "latest",
+    "terraform": "latest"
+  },
+  "postCreateCommand": "aws eks update-kubeconfig --region <your-region> --name <your-cluster-name>"
+}
